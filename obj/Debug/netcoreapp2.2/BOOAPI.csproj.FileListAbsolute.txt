@@ -3,7 +3,6 @@ C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\BOOAPI.runtimeconfig.json
 C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\BOOAPI.runtimeconfig.dev.json
 C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\BOOAPI.dll
 C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\BOOAPI.pdb
-C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.csprojAssemblyReference.cache
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.csproj.CoreCompileInputs.cache
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.RazorAssemblyInfo.cache
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.RazorAssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.AssemblyInfo.cs
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.RazorTargetAssemblyInfo.cache
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.dll
 C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.pdb
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\BOOAPI.csprojAssemblyReference.cache

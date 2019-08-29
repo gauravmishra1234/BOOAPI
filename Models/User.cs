@@ -17,6 +17,7 @@ namespace BOOAPI.Models
         public bool? IsActive { get; set; }
         public DateTime CreatedDate { get; set; }
         public int RoleId { get; set; }
+        public string Token { get; set; }
 
         public virtual Role Role { get; set; }
         public virtual ICollection<UserMenuAccess> UserMenuAccess { get; set; }

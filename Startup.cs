@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BOOAPI.Models;
+using BOOAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using BOOAPI.IServices;
 
 namespace BOOAPI
 {
@@ -29,6 +31,7 @@ namespace BOOAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<BooDevContext>(item => item.UseSqlServer(Configuration.GetConnectionString("EntityDBConnection")));
+            services.AddScoped<IUserServices,UserServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

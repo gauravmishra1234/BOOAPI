@@ -308,6 +308,8 @@ namespace BOOAPI.Models
 
                 entity.Property(e => e.RoleId).HasColumnName("RoleID");
 
+                entity.Property(e => e.Token).IsRequired();
+
                 entity.Property(e => e.UserName)
                     .HasMaxLength(50)
                     .IsUnicode(false);

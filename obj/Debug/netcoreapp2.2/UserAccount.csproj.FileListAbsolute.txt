@@ -1,0 +1,13 @@
+C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\UserAccount.deps.json
+C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\UserAccount.runtimeconfig.json
+C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\UserAccount.runtimeconfig.dev.json
+C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\UserAccount.dll
+C:\CES Energy\CES\BOOAPI\bin\Debug\netcoreapp2.2\UserAccount.pdb
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.csproj.CoreCompileInputs.cache
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.RazorAssemblyInfo.cache
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.RazorAssemblyInfo.cs
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.AssemblyInfoInputs.cache
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.AssemblyInfo.cs
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.RazorTargetAssemblyInfo.cache
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.dll
+C:\CES Energy\CES\BOOAPI\obj\Debug\netcoreapp2.2\UserAccount.pdb

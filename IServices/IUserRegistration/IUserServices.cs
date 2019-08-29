@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BOOAPI.Services
+namespace BOOAPI.IServices
 {
     public interface IUserServices
     {
-        User Authenticate(string username, string password);
+        User GetValidateUser(string username, string password);
     }
 }

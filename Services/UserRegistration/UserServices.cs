@@ -1,26 +1,24 @@
-﻿using BOOAPI.Helpers;
-using BOOAPI.IServices;
-using BOOAPI.Models;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
+﻿using UserAccount.Helpers;
+using UserAccount.IServices;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
+using UserAccount.Models;
+using Microsoft.Extensions.Options;
 
-namespace BOOAPI.Services
+namespace UserAccount.Services
 {
     public class UserServices : IUserServices
     {
         private readonly BooDevContext _context;
         private readonly AppSettings _appSettings;
-        public UserServices(BooDevContext context)
+        public UserServices(IOptions<AppSettings> appSettings, BooDevContext context)
         {
             _context = context;
+            _appSettings = appSettings.Value;
         }
 
         public User GetValidateUser(string userName, string password)

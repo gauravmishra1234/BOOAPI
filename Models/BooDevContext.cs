@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace BOOAPI.Models
+namespace UserAccount.Models
 {
     public partial class BooDevContext : DbContext
     {
@@ -29,14 +29,14 @@ namespace BOOAPI.Models
         public virtual DbSet<UserMenuAccess> UserMenuAccess { get; set; }
         public virtual DbSet<UserMenuAuthorization> UserMenuAuthorization { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=ces41cs.database.windows.net;Database=BooDev;User ID=neerav;Password=Anika@190409;");
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+        //        //optionsBuilder.UseSqlServer("Server=4895PV2\\SQLEXPRESS;Database=BooDev;Integrated Security=True;");
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -292,6 +292,10 @@ namespace BOOAPI.Models
                     .HasName("PK_Users")
                     .ForSqlServerIsClustered(false);
 
+                entity.HasIndex(e => e.Email)
+                    .HasName("UNK_Email")
+                    .IsUnique();
+
                 entity.HasIndex(e => e.UserName)
                     .HasName("UNK_Users")
                     .IsUnique();
@@ -302,13 +306,15 @@ namespace BOOAPI.Models
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
+                entity.Property(e => e.Email)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.IsActive)
                     .IsRequired()
                     .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.RoleId).HasColumnName("RoleID");
-
-                entity.Property(e => e.Token).IsRequired();
 
                 entity.Property(e => e.UserName)
                     .HasMaxLength(50)

@@ -1,5 +1,5 @@
 ﻿
-namespace BOOAPI.Helpers
+namespace UserAccount.Helpers
 {
     public class AppSettings
     {

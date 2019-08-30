@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BOOAPI.IServices;
-using BOOAPI.Models;
-using BOOAPI.Services;
-using Microsoft.AspNetCore.Http;
+﻿using UserAccount.IServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using UserAccount.Models;
 
-namespace BOOAPI.Controllers
+namespace UserAccount.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -20,18 +15,18 @@ namespace BOOAPI.Controllers
             _userServices = userServices;
         }
 
-        [HttpGet]
-        public User GetValidate(string userName, string password)
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult GetValidate([FromBody]User userParam)
         {
-            var user = _userServices.GetValidateUser(userName, password);
-
+            var user = _userServices.GetValidateUser(userParam.UserName, userParam.Password);
             if (user == null)
             {
-                return null;
+                return BadRequest(new { message = "Username or password is incorrect" });
             }
             else
             {
-                return user;
+                return Ok(user);
             }
         }
     }

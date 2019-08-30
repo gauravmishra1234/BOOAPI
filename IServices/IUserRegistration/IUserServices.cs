@@ -1,10 +1,10 @@
-﻿using BOOAPI.Models;
+﻿using UserAccount.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BOOAPI.IServices
+namespace UserAccount.IServices
 {
     public interface IUserServices
     {

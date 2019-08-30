@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BOOAPI.Models;
+using UserAccount.Models;
 
-namespace BOOAPI.Controllers
+namespace UserAccount.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BOOAPI.Models
+namespace UserAccount.Models
 {
     public partial class RoleMenuAuthorization
     {
